@@ -1,5 +1,7 @@
 # DocKit
 
+**English** | [中文](README_CN.md)
+
 Document processing toolkit for Word, PowerPoint, Excel, and CSV files.
 
 **Bytes in, bytes out.** Pure processing logic with no file I/O assumptions — use it from CLI scripts, web apps, or any Python program.
