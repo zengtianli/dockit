@@ -4,10 +4,38 @@ Document processing toolkit for Word, PowerPoint, Excel, and CSV files.
 
 **Bytes in, bytes out.** Pure processing logic with no file I/O assumptions — use it from CLI scripts, web apps, or any Python program.
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-dockit.tianlizeng.cloud-blue?style=for-the-badge)](https://dockit.tianlizeng.cloud)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge)](https://python.org)
+
+---
+
+### Try it now — no install needed
+
+**https://dockit.tianlizeng.cloud**
+
+Upload your document, pick a tool, download the result. Zero setup.
+
+---
+
+## What can DocKit do?
+
+| Tool | What it does | Input | Output |
+|------|-------------|-------|--------|
+| **Word Format Fix** | Fix quotes, punctuation, units in `.docx` | Word file | Word file |
+| **Format Convert** | Convert between XLSX, CSV, TXT | Spreadsheet | Spreadsheet |
+| **PPT Standardize** | Unify fonts, fix text, set table styles | PowerPoint | PowerPoint |
+| **Table Merge** | Merge multiple spreadsheets by column matching | Excel files | Excel file |
+
 ## Install
 
 ```bash
-pip install dockit
+# From GitHub (recommended)
+pip install git+https://github.com/zengtianli/dockit.git
+
+# For local development
+git clone https://github.com/zengtianli/dockit.git
+cd dockit && pip install -e .
 ```
 
 ## Quick Start
@@ -15,14 +43,11 @@ pip install dockit
 ```python
 from dockit.docx import format_text
 
-# Read file
 with open("input.docx", "rb") as f:
     doc_bytes = f.read()
 
-# Process
 result = format_text(doc_bytes, fix_quotes=True, fix_punctuation=True, fix_units=True)
 
-# Write result
 with open("output.docx", "wb") as f:
     f.write(result.data)
 
@@ -59,14 +84,21 @@ print(result.stats)  # {"quotes": 5, "punctuation": 12, "units": 3}
 - Replace circled numbers with plain format
 - Reorder rows by a reference list
 
-## Web App
+## Self-host
 
-DocKit includes a Streamlit web interface for non-technical users:
+Run your own instance with Docker or directly:
 
 ```bash
-pip install dockit[web]
+# Docker
+docker build -t dockit .
+docker run -p 8503:8503 dockit
+
+# Or run directly
+pip install -e .[web]
 streamlit run app/app.py
 ```
+
+Or just use the hosted version: **https://dockit.tianlizeng.cloud**
 
 ## License
 
