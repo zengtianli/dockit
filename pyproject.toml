@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dockit"
+version = "0.1.0"
+description = "Document processing toolkit for Word, PowerPoint, Excel, and CSV files"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "tianli" }]
+keywords = ["docx", "pptx", "xlsx", "csv", "document", "formatting"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Office/Business",
+]
+dependencies = [
+    "python-docx>=0.8.11",
+    "python-pptx>=0.6.21",
+    "openpyxl>=3.1.0",
+    "lxml>=4.9.0",
+]
+
+[project.optional-dependencies]
+excel = ["pandas>=2.0.0", "xlrd>=2.0.0"]
+web = ["streamlit>=1.28.0"]
+dev = ["pytest>=7.0", "ruff>=0.4.0"]
+all = ["dockit[excel,web,dev]"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dockit"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
