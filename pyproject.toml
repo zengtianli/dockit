@@ -4,13 +4,13 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dockit"
-version = "0.1.0"
-description = "Document processing toolkit for Word, PowerPoint, Excel, and CSV files"
+version = "0.2.0"
+description = "Document processing toolkit for Word, PowerPoint, Excel, CSV, Markdown, and charts"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
 authors = [{ name = "tianli" }]
-keywords = ["docx", "pptx", "xlsx", "csv", "document", "formatting"]
+keywords = ["docx", "pptx", "xlsx", "csv", "markdown", "chart", "document", "formatting"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Python :: 3.11",
@@ -26,9 +26,10 @@ dependencies = [
 
 [project.optional-dependencies]
 excel = ["pandas>=2.0.0", "xlrd>=2.0.0"]
+chart = ["matplotlib>=3.7.0", "numpy>=1.24.0"]
 web = ["streamlit>=1.28.0"]
 dev = ["pytest>=7.0", "ruff>=0.4.0"]
-all = ["dockit[excel,web,dev]"]
+all = ["dockit[excel,chart,web,dev]"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dockit"]

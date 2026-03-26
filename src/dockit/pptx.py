@@ -288,3 +288,34 @@ def standardize(
     combined_stats.update(result.stats)
 
     return PptxFormatResult(data=result.data, stats=combined_stats)
+
+
+def to_markdown(pptx_bytes: bytes) -> str:
+    """Convert a PowerPoint file to Markdown text.
+
+    Extracts text from all slides including shapes and speaker notes.
+
+    Args:
+        pptx_bytes: Raw bytes of a .pptx file.
+
+    Returns:
+        Markdown-formatted string with slide content.
+    """
+    prs = Presentation(BytesIO(pptx_bytes))
+    parts = []
+
+    for i, slide in enumerate(prs.slides, 1):
+        parts.append(f"## Slide {i}\n")
+
+        for shape in slide.shapes:
+            if hasattr(shape, "text") and shape.text:
+                parts.append(shape.text + "\n")
+
+        if slide.has_notes_slide:
+            notes = slide.notes_slide.notes_text_frame.text
+            if notes:
+                parts.append(f"### Speaker Notes\n\n{notes}\n")
+
+        parts.append("---\n")
+
+    return "\n".join(parts)
