@@ -18,6 +18,8 @@ Document processing toolkit for Word, PowerPoint, Excel, and CSV files.
 
 Upload your document, pick a tool, download the result. Zero setup.
 
+![DocKit Homepage](docs/screenshots/homepage.png)
+
 ---
 
 ## What can DocKit do?
@@ -25,9 +27,18 @@ Upload your document, pick a tool, download the result. Zero setup.
 | Tool | What it does | Input | Output |
 |------|-------------|-------|--------|
 | **Word Format Fix** | Fix quotes, punctuation, units in `.docx` | Word file | Word file |
+| **Word Text Extract** | Full text extraction to Markdown | Word file | Markdown |
+| **Word Style Cleanup** | Remove unused styles, rename/merge styles | Word file | Word file |
 | **Format Convert** | Convert between XLSX, CSV, TXT | Spreadsheet | Spreadsheet |
 | **PPT Standardize** | Unify fonts, fix text, set table styles | PowerPoint | PowerPoint |
+| **PPT to Markdown** | Extract slide text with speaker notes | PowerPoint | Markdown |
 | **Table Merge** | Merge multiple spreadsheets by column matching | Excel files | Excel file |
+| **Table Standardize** | Check headers, reorder, auto-complete | Excel file | Excel file |
+| **Chart Generation** | Bar charts, Gantt charts, flow diagrams | JSON config | PNG |
+| **Markdown to Word** | Convert Markdown to styled Word document | Markdown | Word file |
+| **Format Inspection** | Inspect document structure and styles | Word file | Report |
+| **Revision Marks** | Add revision marks to Word documents | Word file | Word file |
+| **Image Captions** | Add captions to images in Word documents | Word file | Word file |
 
 ## Install
 

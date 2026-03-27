@@ -18,6 +18,8 @@
 
 上传文档，选择工具，下载结果。零配置，开箱即用。
 
+![DocKit 首页](docs/screenshots/homepage.png)
+
 ---
 
 ## 能做什么？
@@ -25,9 +27,18 @@
 | 工具 | 功能 | 输入 | 输出 |
 |------|------|------|------|
 | **Word 格式修复** | 修复引号配对、英文标点转中文、单位符号标准化 | Word 文件 | Word 文件 |
+| **Word 文本提取** | 全文提取为 Markdown | Word 文件 | Markdown |
+| **Word 样式清理** | 删除未使用样式、重命名/合并样式 | Word 文件 | Word 文件 |
 | **格式转换** | XLSX、CSV、TXT 互转 | 表格文件 | 表格文件 |
 | **PPT 标准化** | 统一字体、修复文本格式、设置表格样式 | PowerPoint | PowerPoint |
+| **PPT 转 Markdown** | 提取幻灯片文本及演讲者备注 | PowerPoint | Markdown |
 | **表格合并** | 按列名匹配合并多个表格 | 多个 Excel | Excel 文件 |
+| **表格标准化** | 检查表名和引导段落、一键补全/重排序 | Excel 文件 | Excel 文件 |
+| **图表生成** | 柱状图 / 甘特图 / 流程图 | JSON 配置 | PNG |
+| **Markdown 转 Word** | Markdown 转带样式 Word 文档 | Markdown | Word 文件 |
+| **格式检查** | 检查文档结构和样式 | Word 文件 | 报告 |
+| **修订标记** | 为 Word 文档添加修订标记 | Word 文件 | Word 文件 |
+| **图片题注** | 为 Word 文档中的图片添加题注 | Word 文件 | Word 文件 |
 
 ## 安装
 
