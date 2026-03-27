@@ -11,6 +11,15 @@ st.set_page_config(
 st.title("📄 DocKit")
 st.subheader("文档处理工具箱")
 
+st.markdown(
+    '<div style="text-align:center; color:gray; font-size:13px;">'
+    '⭐ <a href="https://github.com/zengtianli/dockit">Star on GitHub</a> · '
+    '👤 <a href="https://github.com/zengtianli">Tianli Zeng</a> · '
+    '🌊 <a href="https://hydro.tianlizeng.cloud">Hydro Toolkit — 水利计算工具集</a>'
+    '</div>',
+    unsafe_allow_html=True,
+)
+
 st.markdown("拖入文件，一键处理，下载结果。支持 Word / PowerPoint / Excel / CSV 批量处理。")
 
 st.divider()
@@ -112,9 +121,12 @@ with col7:
     """)
 
 st.divider()
-
-st.markdown(
-    "**DocKit** is open source — "
-    "[GitHub](https://github.com/zengtianli/dockit) · "
-    "`pip install dockit`"
-)
+st.markdown("""
+<div style="text-align:center; color:gray; font-size:13px;">
+    <b>DocKit</b> is open source ·
+    <a href="https://github.com/zengtianli/dockit">⭐ Star on GitHub</a> ·
+    <code>pip install dockit</code><br/>
+    Built by <a href="https://github.com/zengtianli">Tianli Zeng</a> ·
+    More tools: <a href="https://hydro.tianlizeng.cloud">🌊 Hydro Toolkit</a>
+</div>
+""", unsafe_allow_html=True)
