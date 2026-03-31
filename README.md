@@ -8,7 +8,7 @@ Document processing toolkit for Word, PowerPoint, Excel, and CSV files.
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-dockit.tianlizeng.cloud-blue?style=for-the-badge)](https://dockit.tianlizeng.cloud)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Python 3.10+](https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge)](https://python.org)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-yellow?style=for-the-badge)](https://python.org)
 
 ---
 

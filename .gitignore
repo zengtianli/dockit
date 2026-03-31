@@ -12,3 +12,11 @@ build/
 .mypy_cache/
 *.so
 .DS_Store
+
+
+# Virtual env
+venv/
+
+# IDE
+.idea/
+.vscode/
