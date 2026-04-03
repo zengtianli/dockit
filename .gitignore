@@ -20,3 +20,8 @@ venv/
 # IDE
 .idea/
 .vscode/
+
+# Baseline (auto-added by /groom)
+*$py.class
+Thumbs.db
+*.swp
